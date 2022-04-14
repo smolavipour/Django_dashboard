@@ -12,4 +12,15 @@ Set up a Django project according to the guide on [Link](https://docs.djangoproj
 We create the project dashboard first:
 <pre><code>django-admin startproject mysite</code></pre>
 Inside the project, we create the main application which we call it myapp.
-<pre><code>python manage.py startapp polls</code></pre>
+<pre><code>python manage.py startapp myapp</code></pre>
+
+Inside settings.py:
+> We add myapp to the INSTALLED_APPS.
+> We need to setup the database so that Django recognizes the schemas inside it.
+
+Inside url.py:
+> We add <code>path('myapp/', include('myapp.urls'))</code>
+
+Create a view module inside myapp/views.py.
+
+Create urls.py inside my app and link the module in views.py
