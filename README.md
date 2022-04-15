@@ -7,7 +7,7 @@ This project is done on Windows 10, and Python 3.8.8 and Django 4.0.4 are instal
 
 <pre><code>pg_ctl.exe restart -D  "C:\Program Files\PostgreSQL\14\data"</code></pre>
 
-## Step 1
+## Step 1 -- Initializing Django
 Set up a Django project according to the guide on [Link](https://docs.djangoproject.com/en/4.0/intro/tutorial01/).
 We create the project dashboard first:
 <pre><code>django-admin startproject mysite</code></pre>
@@ -17,6 +17,16 @@ Inside the project, we create the main application which we call it myapp.
 Inside settings.py:
 > We add myapp to the INSTALLED_APPS.
 > We need to setup the database so that Django recognizes the schemas inside it.
+<pre><code>
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Student_db',
+        'USER': 'postgres',
+        'PASSWORD': ,
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+</code></pre>
 
 Inside url.py:
 > We add <code>path('myapp/', include('myapp.urls'))</code>
