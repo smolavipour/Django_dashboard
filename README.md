@@ -25,4 +25,4 @@ Create a view module inside myapp/views.py.
 
 Create urls.py inside my app and link the module in views.py
 
-After running migrating the project and running the server, we should be able to see the page.[Image](./.img/view1.png)
+After running migrating the project and running the server, we should be able to see the page. ![Alt text](./.img/view1.png)
